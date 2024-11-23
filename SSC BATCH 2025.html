@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .scroll-text {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .scroll-text span {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .search-bar {
+            margin: 20px auto;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .image {
+            width: 400px;
+            height: 200px;
+            margin: 20px auto;
+            display: block;
+        }
+        .button-container {
+            margin: 20px 0;
+        }
+        .button-container a {
+            text-decoration: none;
+        }
+        .button-container button {
+            margin: 5px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            margin: 20px 0;
+        }
+        .footer img {
+            width: 400px;
+            height: auto;
+        }
+        .footer textarea {
+            width: 80%;
+            height: 100px;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Text -->
+    <div class="scroll-text">
+        <span> <b>কবি বলেছেন :🗣️" চুরি বিদ্যা মহা বিদ্যা, যদি না পরো ধরা "</span>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for posts...">
+        <button onclick="searchPosts()">Search</button>
+    </div>
+
+    <!-- Main Image -->
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYfUHzVxQ-a-dCOVIwvplLVcCvrK6w5wEh-KFfnAobRBjqXV9RGeTq7jdm7eBF31L2FelAg0YnCG65V7M-AQeTZS3ex6mjltcCOP6ppKqsOMH6R2PCawePup6yNagzLJkbh9wJss_uH1gTJcqi0pHGo3JjnmYqZzZhgjEOWsDQdNAfweP-RmzIMG9ppgs/s984/IMG_20241123_182427.jpg" alt="Main Image" class="image">
+
+    <!-- Buttons -->
+    <div class="button-container">
+        <a href="http://localhost:8080/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE.html"target="_blank"><button>বাংলা-২</button></a>
+        <a href="http://localhost:8080/%E0%A6%87%E0%A6%82%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BF.html" target="_blank"><button>ইংরেজি-২</button></a>
+        <a href="http://localhost:8080/%E0%A6%97%E0%A6%A8%E0%A6%BF%E0%A6%A4.html" target="_blank"><button>গনিত-২</button></a>
+        <a href="http://localhost:8080/%E0%A6%AA%E0%A6%A6%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8.html" target="_blank"><button>পদার্থবিজ্ঞান-২ </button></a>
+        <a href="http://localhost:8080/%E0%A6%B0%E0%A6%B8%E0%A6%BE%E0%A7%9F%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8.html" target="_blank"><button>রসায়ন বিজ্ঞান-২</button></a>
+        <a href="http://localhost:8080/%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE%20%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE%20%E0%A6%93%20%E0%A6%A8%E0%A7%88%E0%A6%A4%E0%A6%BF%E0%A6%95%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE.html" target="_blank"><button>ইসলাম ধর্ম ও নৈতিক শিক্ষা_২ </button></a>
+        <a href="http://localhost:8080/%E0%A6%95%E0%A7%83%E0%A6%B7%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE.html" target="_blank"><button>কৃষি শিক্ষা-২ </button></a>
+        <a href="http://localhost:8080/%E0%A6%9C%E0%A7%87%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B2%20%E0%A6%87%E0%A6%B2%E0%A7%87%E0%A6%95%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%20%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A6%B8%20%20%E0%A7%A7%E0%A6%AE%20%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0.html" target="_blank"><button>জেনারেল ইলেকট্রিক্যাল ওয়ার্কস  ১ম পত্র-২</button></a>
+        <a href="http://localhost:8080/%E0%A6%9C%E0%A7%87%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B2%20%E0%A6%87%E0%A6%B2%E0%A7%87%E0%A6%95%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%20%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A6%B8%20%20%E0%A7%A8%E0%A7%9F%20%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0.html" target="_blank"><button>জেনারেল ইলেকট্রিক্যাল ওয়ার্ক ২য় পত্র-২</button></a>
+        <a href="http://localhost:8080/%E0%A6%86%E0%A6%A4%E0%A7%8D%E0%A6%AE%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%B8%E0%A6%82%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%BE%E0%A6%A8%20%E0%A6%93%20%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B8%E0%A6%BE%E0%A6%B0%20%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A7%8B%E0%A6%97.html" target="_blank"><button>আত্মকর্মসংস্থান ও ব্যবসার উদ্যোগ-২ </button></a>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz5gakAXzlZ4145JKWE3_9XHxSxGZLsIg0PDoe6U8w1o4Izo81SOSJShuUNI0YAteGP6xHvW8A7zuhST17O48m2s3JYUi68bxZ1g7BF6ABDckoKnM8nLkQDmiD1tR5HRl4TTsfJy7Ja6gme_kKBcMXQ0t8u1T63U0pp3l1OnFrVnYsAQXsOsz9MkvO6Qw/s1600/IMG_20240422_062208_768.jpg" alt="Footer Image">
+    </div> 
+    <h2> <h3><sup>Create by</sup><h3><b> Robiul Islam Rakib</b></h2>
+    <p> </p>
+
+    <!-- Script for Search -->
+    <script>
+        function searchPosts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            alert("Searching for: " + query);
+            // Add search logic here, if needed connect with a backend.
+        }
+    </script>
+
+</body>
+</html>
